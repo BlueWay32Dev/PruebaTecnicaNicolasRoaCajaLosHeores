@@ -1,0 +1,19 @@
+@use "../abstracts/variables" as v;
+
+%card {
+  background: v.$white;
+  border: 1px solid v.$medium-gray;
+  border-radius: v.$border-radius;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.card {
+  @extend %card;
+}

@@ -1,0 +1,22 @@
+@use "../abstracts/variables" as v;
+
+.page {
+  max-width: v.$container-width;
+  margin: 2rem auto;
+  padding: 0 1rem;
+
+  &--center {
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  &__empty {
+    margin-top: 2rem;
+    color: v.$medium-gray;
+  }
+}

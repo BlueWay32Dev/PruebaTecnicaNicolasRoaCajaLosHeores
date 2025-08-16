@@ -1,0 +1,70 @@
+@use "../abstracts/variables" as v;
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: v.$button-color;
+  color: v.$white;
+  border: none;
+  padding: 1rem 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: v.$border-radius;
+  transition: background 0.2s ease;
+
+  &:hover:enabled {
+    background: v.$button-color;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+.button--secondary {
+  background: v.$secondary-blue;
+
+  &:hover:enabled {
+    background: v.$secondary-blue;
+  }
+}
+
+.button--danger {
+  background: v.$red-remove;
+
+  &:hover:enabled {
+    background: v.$red-remove;
+  }
+}
+
+.button--edit,
+.button--remove {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  white-space: nowrap;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.button--edit {
+  background: v.$blue-edit;
+
+  &:hover:enabled {
+    background: v.$blue-edit;
+  }
+}
+
+.button--remove {
+  background: v.$red-remove;
+
+  &:hover:enabled {
+    background: v.$red-remove;
+  }
+}

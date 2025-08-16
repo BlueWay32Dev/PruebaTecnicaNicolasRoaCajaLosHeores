@@ -1,0 +1,78 @@
+@use "../abstracts/variables" as v;
+
+.form__textarea-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.form__textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: v.$border-radius;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+  &:focus {
+    border-color: v.$primary-blue;
+    box-shadow: 0 0 0 2px rgba(v.$primary-blue, 0.25);
+  }
+
+  &::placeholder {
+    color: v.$dark-text;
+  }
+
+  &--error {
+    border-color: red !important;
+    box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.25);
+  }
+}
+
+.form__counter {
+  position: absolute;
+  bottom: 6px;
+  right: 12px;
+  font-size: 0.85rem;
+  color: v.$dark-text;
+  user-select: none;
+
+  &--error {
+    color: red;
+    font-weight: bold;
+  }
+}
+
+.input {
+  width: 100%;
+  max-width: 500px;
+  padding: 1rem;
+  font-size: 1rem;
+  border: 1px solid v.$medium-gray;
+  border-radius: v.$border-radius;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 1rem;
+  border: 1px solid v.$medium-gray;
+  border-radius: v.$border-radius;
+  resize: vertical;
+}
+
+.select {
+  padding: 0.75rem 1rem;
+  border: 1px solid v.$medium-gray;
+  border-radius: v.$border-radius;
+  background: v.$white;
+}
+
+.form__required {
+  color: red;
+  font-weight: bold;
+  margin-left: 0.25rem;
+}

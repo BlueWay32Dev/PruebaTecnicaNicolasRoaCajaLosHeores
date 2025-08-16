@@ -1,0 +1,25 @@
+@use "../abstracts/variables" as v;
+
+.search-bar {
+  background: v.$white;
+  border-radius: v.$border-radius;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+
+  margin: 2rem auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  .input {
+    @extend .input;
+    max-width: 500px;
+    width: 100%;
+  }
+
+  .button {
+    @extend .button;
+  }
+}

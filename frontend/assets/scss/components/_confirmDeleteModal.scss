@@ -1,0 +1,103 @@
+@use "../abstracts/variables" as v;
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-card {
+  background: v.$white;
+  border-radius: v.$border-radius;
+  padding: 2rem;
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.book-cover-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+
+  .book-cover {
+    width: 140px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.book-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0.8rem 0;
+  color: v.$dark-text;
+  text-align: center;
+}
+
+.book-review {
+  font-size: 1rem;
+  color: #555;
+  margin: 0.5rem 0 1rem;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+.book-rating {
+  margin: 0.8rem 0 1.5rem;
+}
+
+.question {
+  margin: 1rem 0 1.5rem;
+  font-weight: bold;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+
+  .btn-confirm {
+    background: v.$red-remove;
+    color: v.$white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: v.$border-radius;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+
+    &:hover {
+      background: v.$red-remove;
+    }
+  }
+
+  .btn-cancel {
+    background: v.$accent-orange;
+    color: v.$white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: v.$border-radius;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+
+    &:hover {
+      background: v.$accent-orange;
+    }
+  }
+}

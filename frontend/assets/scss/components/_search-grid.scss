@@ -1,0 +1,19 @@
+@use "../abstracts/variables" as v;
+@use "../layout/grid";
+
+.search-results {
+  background: v.$white;
+  border-radius: v.$border-radius;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+.search-grid {
+  @extend %grid-base;
+  @extend %grid-auto;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}

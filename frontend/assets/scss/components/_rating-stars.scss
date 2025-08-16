@@ -1,0 +1,22 @@
+@use "../abstracts/variables" as v;
+
+.rating-stars {
+  display: flex;
+  gap: 0.25rem;
+
+  .star {
+    font-size: 1.8rem;
+    color: v.$medium-gray;
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.1s ease;
+
+    &.active {
+      color: v.$gold;
+    }
+
+    &.hover {
+      color: v.$gold;
+      transform: scale(1.1);
+    }
+  }
+}

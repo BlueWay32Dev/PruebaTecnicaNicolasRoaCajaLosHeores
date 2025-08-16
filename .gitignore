@@ -1,0 +1,38 @@
+# Archivos de log y dependencias
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Reportes de diagnóstico
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Archivos de sistema operativo
+.DS_Store
+Thumbs.db
+
+# Directorios de configuración de editores de código
+.idea
+.vscode/
+
+# Archivos sensibles de entorno
+# NUNCA subir archivos .env a un repositorio público
+.env
+.env.*
+!.env.example
+
+# --- Backend (Node.js / Moleculer) ---
+backend/node_modules/
+backend/.env
+backend/coverage/
+backend/logs/
+
+# --- Frontend (Nuxt 3) ---
+frontend/node_modules/
+frontend/.nuxt/
+frontend/.output/
+frontend/dist/
+frontend/.env

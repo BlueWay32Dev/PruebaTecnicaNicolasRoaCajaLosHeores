@@ -1,0 +1,51 @@
+@use "../abstracts/variables" as v;
+@use "../layout/cards";
+
+.book-card {
+  @extend %card;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 320px;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+  }
+
+  &__cover {
+    flex: 0 0 180px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+      border-radius: v.$border-radius;
+    }
+  }
+
+  &__title {
+    margin-top: auto;
+    font-size: 1rem;
+    font-weight: bold;
+    color: v.$dark-text;
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+  }
+
+  &__author {
+    font-size: 0.9rem;
+    color: v.$medium-gray;
+  }
+}

@@ -1,0 +1,51 @@
+@use "../abstracts/variables" as v;
+
+.last-searches {
+  background: v.$white;
+  border-radius: v.$border-radius;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+
+  margin: 2rem auto;
+
+  &__divider {
+    border: 0;
+    border-top: 2px solid v.$dark-text;
+    margin: 1rem 0;
+  }
+
+  &__title {
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    margin: 0;
+  }
+}
+
+.button--chip {
+  background: v.$primary-blue;
+  color: v.$white;
+  padding: 0.3rem 0.7rem;
+  border-radius: v.$border-radius;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: v.$primary-blue;
+  }
+}
