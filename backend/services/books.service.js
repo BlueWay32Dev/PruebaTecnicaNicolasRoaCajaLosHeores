@@ -23,7 +23,7 @@ module.exports = {
             authors: doc.author_name || [],
             publishYear: doc.first_publish_year || null,
             cover: doc.cover_i
-              ? `${process.env.OPEN_LIBRARY_COVERS_URL}/${doc.cover_i}-${process.env.OPEN_LIBRARY_COVERS_SIZE}`
+              ? `${process.env.OPEN_LIBRARY_COVERS_URL}/${doc.cover_i}-M.jpg`
               : "https://placehold.co/250x250?text=no+foto",
             openLibraryKey: (doc.key || "").replace("/works/", ""),
           }));
