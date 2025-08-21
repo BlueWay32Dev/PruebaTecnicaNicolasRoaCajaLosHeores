@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "moleculer-runner --hot --repl services",
+    "start": "moleculer-runner services",
+    "build": "echo 'No build step for this project.'",
+    "dev": "moleculer-runner --hot services",
     "test": "jest --verbose"
   },
   "keywords": [],
