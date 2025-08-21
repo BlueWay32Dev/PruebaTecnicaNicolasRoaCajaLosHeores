@@ -64,8 +64,12 @@ module.exports = {
             data.created?.value?.match(/\d{4}/) || [null])[0];
 
           const cover = data.covers?.length
-            ? `${process.env.OPEN_LIBRARY_COVERS_URL}/${data.covers[0]}-${process.env.OPEN_LIBRARY_COVERS_SIZE}`
-            : "https://placehold.co/250x250?text=no+foto";
+  ? data.covers[0] !== -1 
+    ? `${process.env.OPEN_LIBRARY_COVERS_URL}/${data.covers[0]}-${process.env.OPEN_LIBRARY_COVERS_SIZE}`
+    : data.covers[1] 
+      ? `${process.env.OPEN_LIBRARY_COVERS_URL}/${data.covers[1]}-${process.env.OPEN_LIBRARY_COVERS_SIZE}`
+      : "https://placehold.co/250x250?text=no+foto"
+  : "https://placehold.co/250x250?text=no+foto";
 
           return {
             id: ctx.params.id,
