@@ -2,7 +2,7 @@ import { useRouter } from "vue-router";
 
 export function useApi() {
   const router = useRouter();
-  const baseURL = "http://localhost:3000/api";
+  const baseURL = "https://pruebatecnicanicolasroacajalosheores.onrender.com/api";
 
   async function request(endpoint, options = {}) {
     const token = localStorage.getItem("authToken");
