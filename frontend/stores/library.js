@@ -59,7 +59,7 @@ export const useLibraryStore = defineStore("library", () => {
     const c = book.cover || "";
     if (c.startsWith("data:")) return c;
 
-    const base = import.meta.env.VITE_API_BASE || "http://localhost:3000/api";
+    const base = import.meta.env.VITE_API_BASE || "https://pruebatecnicanicolasroacajalosheores.onrender.com/api";
     return `${base}/books/my-library/front-cover/${book.apiId}`;
   }
 
