@@ -112,7 +112,6 @@ export const useLibraryStore = defineStore("library", () => {
     try {
       await api.removeBook(id);
       books.value = books.value.filter((b) => b.id !== id && b.apiId !== id);
-      toast.success("Libro eliminado");
     } catch (err) {
       toast.error(err?.message || "No se pudo eliminar");
     }
