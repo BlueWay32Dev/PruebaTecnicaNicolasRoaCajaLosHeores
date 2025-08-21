@@ -64,6 +64,7 @@ module.exports = {
         await User.findByIdAndUpdate(ctx.meta.user.id, {
           $pull: { library: deletedBook._id },
         });
+        return { success: true, message: "Libro eliminado exitosamente" };
       },
     },
 
